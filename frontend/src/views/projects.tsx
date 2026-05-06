@@ -26,11 +26,11 @@ const projects: Project[] = [
         tags: ["React", "TypeScript", "AWS CDK", "CloudFront"],
         github: "https://github.com/Ehern15/erik_portfolio",
     },
-    {
-        title: "Chronos",
-        description: "Production time clock system deployed across all Miami-Dade County DMV locations, serving 400 daily users. Integrates with existing badge hardware for identity verification and layers in AI-powered facial recognition via a self-hosted Compreface instance — an open-source recognition service deployed as a multi-container Docker Compose stack and secured on a remote server, accessed exclusively through the Spring Boot backend to keep it off the public network. Liveness detection powered by Google MediaPipe guards against photo spoofing by verifying the user is physically present in real time. The result is a multi-factor biometric clock-in flow running reliably at government scale across multiple county facilities.",
-        tags: ["React", "Spring Boot", "PostgreSQL", "MediaPipe", "Compreface", "Docker"],
-    },
+    // {
+    //     title: "Chronos",
+    //     description: "Production time clock system deployed across all Miami-Dade County DMV locations, serving 400 daily users. Integrates with existing badge hardware for identity verification and layers in AI-powered facial recognition via a self-hosted Compreface instance — an open-source recognition service deployed as a multi-container Docker Compose stack and secured on a remote server, accessed exclusively through the Spring Boot backend to keep it off the public network. Liveness detection powered by Google MediaPipe guards against photo spoofing by verifying the user is physically present in real time. The result is a multi-factor biometric clock-in flow running reliably at government scale across multiple county facilities.",
+    //     tags: ["React", "Spring Boot", "PostgreSQL", "MediaPipe", "Compreface", "Docker"],
+    // },
     // TODO: Add more recent projects here
 ]
 

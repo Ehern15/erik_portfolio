@@ -10,10 +10,10 @@ export function About() {
                 </h1>
                 <p className="text-white/50 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
                     Software Developer at the Miami-Dade Office of the Tax Collector, where I build
-                    both internal tools and citizen-facing applications. Most recently shipped a time
-                    clock system integrating badge hardware with AI facial recognition and liveness
-                    detection. I work primarily with React and Java Spring Boot on PostgreSQL, with a
-                    growing interest in cybersecurity and cloud infrastructure.
+                    both internal tools and citizen-facing applications. Recently focused on integrating
+                    AI with software to provide business solutions. I work primarily with React and
+                    Java Spring Boot on PostgreSQL, with a growing interest in cybersecurity and cloud
+                    infrastructure.
                 </p>
                 <div className="flex flex-wrap gap-4">
                     <a
