@@ -1,68 +1,27 @@
-"use client"
-
-import * as React from "react"
-
-import { cn } from "@/lib/utils"
-//import { Icons } from "@/components/icons"
-import {
-    NavigationMenu,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    
-    navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-
+const navItems = ['About', 'Projects', 'Skills', 'Contact'] as const
 
 export function TopNav() {
     return (
-        <NavigationMenu>
-            <NavigationMenuList>
-
-
-                <NavigationMenuItem>
-
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                        About
-                    </NavigationMenuLink>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                        Projects
-                    </NavigationMenuLink>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                        Skills
-                    </NavigationMenuLink>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                        Contact
-                    </NavigationMenuLink>
-
-                </NavigationMenuItem>
-            </NavigationMenuList>
-        </NavigationMenu>
+        <nav className="sticky top-0 z-50 w-full backdrop-blur-md bg-black/30 border-b border-white/10">
+            <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+                <a
+                    href="#about"
+                    className="text-white font-bold text-lg tracking-tight hover:text-purple-400 transition-colors"
+                >
+                    EH
+                </a>
+                <div className="flex gap-8">
+                    {navItems.map(item => (
+                        <a
+                            key={item}
+                            href={`#${item.toLowerCase()}`}
+                            className="text-white/60 hover:text-white transition-colors text-sm font-medium"
+                        >
+                            {item}
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </nav>
     )
 }
-
-const ListItem = React.forwardRef<
-    React.ElementRef<"a">,
-    React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-    return (
-        <li>
-            <NavigationMenuLink asChild>
-                <a
-                    ref={ref}
-                    className={cn(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                        className
-                    )}
-                    {...props}
-                >
-                    <div className="text-sm font-medium leading-none">{title}</div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        {children}
-                    </p>
-                </a>
-            </NavigationMenuLink>
-        </li>
-    )
-})
-ListItem.displayName = "ListItem"

@@ -7,15 +7,18 @@ import { Projects } from './views/projects'
 import { Skills } from './views/skills'
 
 function App() {
-
   return (
-    <div>
-      <Background/>
-      <TopNav/>
-      <About/>
-      <Projects/>
-      <Skills/>
-      <Footer/>
+    <div className="relative min-h-screen w-full">
+      <Background />
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <TopNav />
+        <main className="flex-1">
+          <About />
+          <Projects />
+          <Skills />
+        </main>
+        <Footer />
+      </div>
     </div>
   )
 }

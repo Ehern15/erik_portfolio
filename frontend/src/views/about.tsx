@@ -1,18 +1,45 @@
-
-
-
 export function About() {
-
     return (
-        <div className="p-10 hover:cursor-default select-none text-left">
-            <h1 className="text-9xl">Erik Hernandez</h1>
-            <h5 className="">SWE Fellow @ Headstarter AI </h5>
-            <h5>★ Bachelor's Degree, CS @ FIU </h5>
-            <h5>★ Interested in Cybersecurity, Web Development, and Software Development.</h5>
-
-            <body>
-                Software Engineer with more than 2 years of experience in software development. Knowledgeable on a variety of computer science topics including data structures and algorithms and cloud computing. Proven skills of programming languages, the design and implementation of database management systems, and the creation and optimization of user interfaces.
-            </body>
-
-        </div>)
+        <section id="about" className="min-h-screen flex flex-col justify-center px-6 py-20">
+            <div className="max-w-5xl mx-auto w-full">
+                <p className="text-purple-400 text-xs tracking-[0.3em] uppercase mb-6">
+                    Software Developer
+                </p>
+                <h1 className="!text-7xl md:!text-8xl lg:!text-9xl font-bold text-white leading-none mb-8">
+                    Erik<br />Hernandez
+                </h1>
+                <p className="text-white/50 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+                    Software Developer at the Miami-Dade Office of the Tax Collector, where I build
+                    both internal tools and citizen-facing applications. Most recently shipped a time
+                    clock system integrating badge hardware with AI facial recognition and liveness
+                    detection. I work primarily with React and Java Spring Boot on PostgreSQL, with a
+                    growing interest in cybersecurity and cloud infrastructure.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                    <a
+                        href="https://github.com/Ehern15"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-2.5 border border-white/20 text-white/80 hover:border-purple-500 hover:text-purple-400 transition-all rounded text-sm font-medium"
+                    >
+                        GitHub
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/erik-hernandez-fiu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-2.5 border border-white/20 text-white/80 hover:border-purple-500 hover:text-purple-400 transition-all rounded text-sm font-medium"
+                    >
+                        LinkedIn
+                    </a>
+                    <a
+                        href="mailto:erikhern15@gmail.com"
+                        className="px-6 py-2.5 bg-purple-600 hover:bg-purple-500 text-white transition-all rounded text-sm font-medium"
+                    >
+                        Get in touch
+                    </a>
+                </div>
+            </div>
+        </section>
+    )
 }

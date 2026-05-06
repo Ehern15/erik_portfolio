@@ -5,6 +5,7 @@
     "portfolio-website": "bin/portfolio-website.js"
   },
   "scripts": {
+    "dev": "cd frontend && npm run dev",
     "deploy": "cdk deploy",
     "predeploy": "cd frontend && npm run build",
     "build": "tsc",
