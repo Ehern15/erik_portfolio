@@ -45,6 +45,11 @@ export function Background() {
             ) : (
                 <div className='shooting-stars north'><div className='head' /></div>
             )}
+            <div className='alien-x'>
+                <div className='alien-y'>
+                    <img className='alien-img' src='/android-chrome-192x192.png' alt='' />
+                </div>
+            </div>
         </div>
     )
 }

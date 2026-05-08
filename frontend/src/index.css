@@ -379,6 +379,42 @@ button:focus-visible {
   }
 }
 
+/* ── Wandering alien ── */
+
+.alien-x {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  pointer-events: none;
+  z-index: 1;
+  animation: alien-drift-x 38s ease-in-out infinite alternate;
+}
+.alien-y {
+  animation: alien-drift-y 24s ease-in-out infinite alternate;
+}
+.alien-img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  opacity: 0.55;
+  transform: translate(-50%, -50%);
+  animation: alien-wobble 7s ease-in-out infinite alternate;
+  image-rendering: pixelated;
+}
+
+@keyframes alien-drift-x {
+  from { transform: translateX(-42vw); }
+  to   { transform: translateX(42vw); }
+}
+@keyframes alien-drift-y {
+  from { transform: translateY(-38vh); }
+  to   { transform: translateY(38vh); }
+}
+@keyframes alien-wobble {
+  from { transform: translate(-50%, -50%) rotate(-12deg) scale(1); }
+  to   { transform: translate(-50%, -50%) rotate(12deg) scale(1.08); }
+}
+
 @media screen and (min-width: 2000px) {
   #galaxy-bg #stars4,
   #galaxy-bg #stars5,
