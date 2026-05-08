@@ -9,3 +9,9 @@ cdk.out
 
 # CDK context cache — contains AWS account ID, regenerated automatically by cdk synth
 cdk.context.json
+
+# macOS
+.DS_Store
+
+# Favicon source files (built assets live in frontend/public/)
+favicon_io/
